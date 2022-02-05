@@ -15,7 +15,8 @@ services:
       - DOCKER_MODS=xiaohaihuang/code-server-nvm-mod|linuxserver/mods:code-server-extension-arguments
       - VSCODE_EXTENSION_IDS="${VSCODE_EXTENSION_IDS}"
     volumes:
-      - /config:/config
+      - ./config:/config
+      - ~/.gitconfig:/config/.gitconfig
     ports:
       - 8443:8443
       - 3000:3000
